@@ -1,0 +1,4 @@
+interface:
+  display_name: "东方神圣几何图腾海报"
+  short_description: "将照片转为上下分屏鎏金东方几何图腾高级海报"
+  default_prompt: "Use $oriental-sacred-geometry-poster to turn each uploaded photo into an individual sacred-geometry totem poster."
