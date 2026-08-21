@@ -1,46 +1,65 @@
 ---
 name: oriental-sacred-geometry-poster
-description: Transform each uploaded photograph into a separate premium 3:4 vertical poster split into an editorial photo and an Oriental sacred-geometry totem. Use for photo-to-poster, photo-to-totem, East Asian sacred geometry, gilt line-art, ritual-mask, guardian-beast, or ceremonial-object visual requests.
+description: Transform each uploaded photograph into a separate premium 3:4 vertical poster with an unchanged editorial photo upper half and a dense Oriental sacred-geometry totem lower half. Use for photo-to-poster, photo-to-totem, East Asian sacred geometry, gilt line-art, ritual-mask, guardian-beast, or ceremonial-object visual requests.
 ---
 
-# Oriental Sacred Geometry Poster
+# 东方神圣几何图腾海报（原提示词锁定版）
 
-Create one finished image per input photo; never make a multi-photo collage. Use image generation or image editing, including every relevant source image as a reference. Inspect source images first when local paths are available.
+使用图像生成或编辑工具时，对每张输入照片单独生成一张海报，不拼接多张来源照片。先查看每一张本地输入图。必须将它作为编辑目标或参考图传入。
 
-## Non-negotiable layout
+## 执行变量：仅允许补充，不得改写核心提示词
 
-- Render in a 3:4 portrait ratio.
-- Divide the canvas into two exactly equal horizontal halves (50% / 50%), with a restrained seam.
-- Upper half: retain the source photograph's principal subject, structural identity, natural texture, lighting, and color atmosphere. Apply only subtle editorial/exhibition-grade color work. Extend sky, ground, or environment naturally when needed; never stretch, distort, replace, or alter the subject.
-- Lower half: isolate the single most important subject from the source and rebuild it as a totem. Remove its real setting and incidental objects.
-- If there are multiple competing subjects, ask which single subject to honor before generating. Otherwise select the clearest, largest, or narratively primary one.
+生成前只识别并填写以下变量：
 
-## Totem translation
+- `[单一核心主体]`：图中最清晰、最大或叙事上最主要的一个主体。若存在无法安全判断的竞争主体，先询问用户。
+- `[关键辨识特征]`：仅 3–5 项，如眼睛、外轮廓、独特纹路、器物结构；不要描述写实纹理、环境或多余细节。
+- `[图腾类型]`：人像为“守护神式图腾 / 仪式面具图腾”；动物为“瑞兽 / 守护兽图腾”；物体为“圣物纹章 / 器物图腾”。
 
-Preserve only the minimum decisive identifiers, then abstract rather than illustrate.
-
-- Person: guardian deity, ritual mask, or ancestral emblem.
-- Animal/pet: auspicious beast or guardian creature.
-- Object: sacred implement, heraldic relic, or ceremonial vessel.
-- Use a vertical central axis with exact or near symmetry. Make the subject appear grown from the construction system, not pasted atop a background.
-- Turn contours, fur, texture, and structures into arcs, spirals, rings, repeated curves, and ordered geometry. Fill 85–95% of height and 80–90% of width with interconnected totemic and geometric information; keep only deliberate small black negative spaces.
-
-## Composition system
-
-Make Malevich-inspired suprematist geometry and precision-drafting logic the dominant structure: layered concentric circles, overlapping arcs, cross-axes, rectangular frames, vertical/horizontal grids, registration points, division lines, compass traces, and partial circles. Maintain layered density throughout the top, middle, and bottom of the totem zone. Favor long continuous curves, concentric contours, cloud-scroll curves, ring lines, repeated ripples, and fine technical drawing lines. Avoid fragmented hatching or attempts at realistic surface rendering.
-
-## Palette and hierarchy
-
-Use matte ink-black as the totem ground with warm ivory gold, aged champagne gold, and pale antique-bronze linework. Make three restrained line levels: slightly brighter principal contours; medium-bright interior patterning; thinner, darker peripheral construction lines. The effect is muted premium print ink, old gilt foil, or antique-book hot stamping—never neon, glowing, chrome-like, 3D metallic, saturated yellow, or orange gold.
-
-## Prompt construction
-
-State the identified subject, its decisive features, and the selected totem archetype. Then explicitly include the layout, equal split, construction system, density, palette, and exclusions. Use this base prompt, adapting bracketed values:
+在锁定提示词之前仅附加这一段变量说明：
 
 ```text
-Create one standalone premium 3:4 vertical poster from the supplied photo of [subject]. The canvas is split into two perfectly equal 50/50 horizontal regions. Upper half: preserve the original [subject], anatomy/structure, material or skin/fur detail, natural lighting, and original color atmosphere; only subtle art-magazine exhibition photography grading; naturally extend the environment if required, without stretching or changing the subject. Lower half: remove the real background and transform the single core [subject] into a [guardian deity ritual mask / auspicious guardian beast / sacred heraldic relic]. Retain only decisive recognition cues: [features]. Build a dense, centered, symmetrical or near-symmetrical Oriental sacred-geometry totem, inseparable from a Malevich suprematist and precision-drafting system: multi-layer concentric circles, crossing arcs, central cross-axis, grids, rectangular boundaries, registration nodes, construction lines, compass traces, partial circles, spirals, ring patterns, and repeated cloud-scroll curves. Geometry leads the composition and integrates with every contour and texture. Cover 85–95% of the lower-region height and 80–90% of its width, dense in center and moderately dense at edges, with only small deliberate matte-black negative spaces. Matte ink-black ground; muted warm ivory-gold, aged-champagne-gold, and pale antique-bronze ultra-fine lines, with three-level line hierarchy. Solemn, mysterious, rational, precise, luxurious but restrained; high-end gift-box sleeve, art print, packaging, or exhibition catalog quality. No glow, neon, chrome, 3D metal, cyberpunk, anime, childish illustration, magical circle, pure mandala, product advertisement, photographic background, oversized blank space, isolated subject, or disconnected geometric background.
+本次执行变量：单一核心主体为「[单一核心主体]」；只保留的关键辨识特征为「[关键辨识特征]」；下半部图腾类型为「[图腾类型]」。除这三项外，不要加入新的风格、材质、构图、光线或主体描述。以下核心提示词必须逐字保持中文语义、结构、顺序和强调强度；不得翻译、压缩、摘要、改写、删除、弱化或用其他提示词替代。
 ```
 
-## Quality gate
+## 锁定核心提示词（原文）
 
-Before delivery, verify: one poster per source; no photo collage; 3:4 portrait; exact 1:1 upper/lower height; source subject untouched in the photo half; only one core subject in the totem half; drafting geometry visibly dictates the totem; high density and axial order; muted non-glowing gilt line hierarchy; no forbidden visual language.
+```text
+你是一名擅长将现实主体转化为**东方神圣几何图腾**的视觉设计师。
+
+你的任务是：请将我上传的每一张照片分别制作成一张独立的高级设计海报，不多图拼接，每张照片单独输出。整体采用3:4竖版构图，上下两个区域高度严格1:1，各占画面50%。 上半部分保留原始照片，保持主体结构、真实质感、自然光影和原有色彩氛围，仅进行轻微高级摄影调色，使其具有艺术杂志、独立出版物和展览摄影质感。为适配画幅，可自然扩展天空、地面或环境背景，但不得拉伸、扭曲或改变主体。 下半部分将用户上传图片中的**单一核心主体**，重构为一张**东方神圣几何图腾风**的高端装饰图像。主体可为**人像、宠物/动物或物体**。
+
+保留主体**最少但最关键的辨识特征**，不追求写实还原；将其进行**图腾化、对称化、纹样化、礼制化、几何化**重构：人像偏向**守护神式图腾 / 仪式面具图腾**，动物偏向**瑞兽 / 守护兽图腾**，物体偏向**圣物纹章 / 器物图腾**。
+
+画面骨架明确借鉴**马列维奇至上主义**、现代主义几何构成与精密制图逻辑，以大量**多层同心圆、交叠圆弧、十字轴线、横竖几何网格、矩形边界、定位节点、辅助分割线**建立整体秩序。几何系统不是背景装饰，而必须**主导全画面构成**；主体应像从几何骨架中生长出来，其轮廓、毛发、纹理或结构应主动延伸并转化为**圆弧、螺旋、环纹、重复几何**，与整个骨架相互嵌合，形成不可拆分的一体化图腾构成。
+
+整体采用**竖版长构图**、**中轴对称或近对称结构**，并强调**满版纹样式构成**。图腾与几何结构应覆盖约**85%–95% 的纵向空间**与**80%–90% 的横向空间**，形成**高密度、层层嵌套、满而有序、繁而不乱**的画面效果。不要让主体孤立悬浮在大片空白中；上、中、下三个区域都应持续分布几何信息、环形结构、辅助线和装饰纹样。中央主体最密，外围几何次密，仅保留少量黑色负空间用于分层和呼吸。
+
+线条系统以**极细、连续、克制的金线**为主，优先使用**长曲线、螺旋线、卷云线、同心轮廓、环纹线、重复波纹、精密制图线**来组织结构；避免用大量短碎线过度模拟真实毛发、皮肤、肌理和体积阴影。允许保留较多**辅助圆、未闭合圆弧、定位轴线、构造节点、圆规轨迹**，增强**理性秩序感、现代主义构成感、蓝图感与高级设计稿感**。
+
+默认配色采用**哑光墨黑背景 + 暖象牙金 / 旧香槟金 / 浅古铜金线条**。主轮廓可略亮，主体内部纹样为中等亮度金线，外围几何和构造线为更暗、更细的古金线，形成清晰的**三级线条层次**。金色应呈现**高级印刷油墨、旧金箔线稿、古籍烫金**般的低饱和、低反光质感，**不发光、不霓虹、不金属 3D 反射**；避免鲜黄色金、橙金、亮金、强 glow 和廉价黑金奢华风。
+
+去除原图真实背景、杂物和生活化环境，不保留摄影空间，不做“主体插画 + 几何背景”的分离式结构。最终效果应呈现为：
+
+**东方图腾 × 马列维奇式现代主义几何构成 × 精密鎏金线描 × 高密度装饰纹样**
+
+整体气质应当**庄重、神秘、理性、精密、华丽但克制**，适合用于**高端礼盒、腰封、封套、挂画、文创包装**等商业载体。
+
+严格避免：**普通写实肖像、普通萌宠插画、产品海报、赛博朋克、二次元、低幼卡通、玄学法阵、魔法阵、纯曼陀罗装饰、发光金属效果、大面积空白、主体与几何背景彼此分离、仅有神秘氛围而缺乏现代主义构成秩序**。
+```
+
+## 强制验收与失败重跑
+
+每次生成后必须先目视检查，不合格不得交付。若出现下列任一项，判定失败并使用同一输入图重跑；最多连续重跑 3 次：
+
+- **主体插画 + 几何背景**：主体轮廓可从几何系统中独立剥离，或圆、网格只停留在主体背后。
+- **亮金**：出现荧光、霓虹、镜面反射、铬金属感，或鲜黄/橙金主导。
+- **留白过多**：下半部有超过约 15% 的非刻意空黑区域，或图腾/制图未达到 85%–95% 纵向、80%–90% 横向覆盖。
+- **写实主体过强**：下半部仍是完整真实肖像、动物或物体，只额外叠加线条；或使用大量短碎线模拟毛发、皮肤、材质与体积阴影。
+
+重跑时，在“执行变量”后、锁定核心提示词前仅加一条失败纠偏语，不得改动核心提示词：
+
+```text
+上一版判定失败，失败类型为「[失败类型]」。本次必须消除该失败：让主体轮廓、纹理与结构直接转译并嵌合为制图几何；使用低饱和、低反光、三级深浅的旧金线；以连续长曲线、环纹、圆弧、辅助线和定位节点填满构图；下半部只保留最少关键辨识特征，禁止写实还原或“主体 + 背景”分层。
+```
+
+在三次仍失败时，停止交付失败图，说明未达到该技能质量标准，并请用户提供满意的历史成图作为视觉参考后再继续。
